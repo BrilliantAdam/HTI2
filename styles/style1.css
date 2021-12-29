@@ -1,0 +1,59 @@
+body{
+    background:#EEE;
+    font-family: "Almarai";
+    direction: rtl;
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#444;
+    text-align: center;
+}
+
+P{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#888;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* كل الاكواد بالأعلى تجريبية فقط*/
+.nav1{
+  background-color: #1a1549;
+  max-height: 50px;
+  color:#eee;
+  position: relative;
+  top: 37px;
+}
+.nav1 ul{
+  text-align: right;
+}
+li{
+  text-decoration: none;
+  display: inline-block;
+  padding:15px;
+  margin:5px;
+  text-align: right;
+}
+
+.logo1 {
+  transform: scale(0.8);
+}
+.right-nav{
+  position: absolute;
+  right: 20px;
+  top: -20px;
+}
+.middle-logo{
+  position: relative;
+  top: -154px;
+  right: 166px;
+  /* float: left; */
+  transform: scale(0.5);
+
+}
+
+.left-nav{
+  position: absolute;
+  left: 20px;
+  top: -20px;
+}
