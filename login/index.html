@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<div class="background-wrap">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>دخول الطلاب</title>
+    <script src="login.js"></script>
+</head>
+<body>
+
+        <div class="background"></div>
+      </div>
+      
+      <form id="accesspanel" action="login.html" method="POST">
+        <h1 id="litheader"> تسجيل دخول الطلاب</h1>
+        <div class="inset">
+          <p>
+            <input type="text" onkeypress="validate(event);" autocomplete="off" name="username" id="email" placeholder="رقم الطالب">
+          </p>
+          <p>
+            <input type="password" name="password" id="password" placeholder="كلمة السر">
+          </p>
+          <div style="text-align: center;">
+            <label for="remember">تذكرني لمدة 14 يوم</label>
+            <div class="checkboxouter">
+              <input type="checkbox" name="rememberme" id="remember" value="Remember">
+              <label class="checkbox"></label>
+            </div>
+           
+          </div>
+          <input class="loginLoginValue" type="hidden" name="service" value="تسجيل الدخول" />
+        </div>
+        <p class="p-container">
+          <input type="submit" name="Login" id="go" value="دخول">
+        </p>
+      </form>
+
+</body>
+</html>
