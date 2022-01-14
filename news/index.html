@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- The next code will add the arabic font to our website !-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../styles/style1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <!-- Adding Icon logo to the website !-->
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+    <header>
+        <!-- Start of Main Navbar -->
+        <nav class="main-nav">
+          <div class="container nav-container center">
+            <div class="right-nav">
+              <ul>
+                <li>عن المعهد</li>
+                <li>الكليات</li>
+                <li>الفروع</li>
+                <li>الأخبار</li>
+              </ul>
+            </div>
+            <div class="middle-logo"></div>
+            <div class="left-nav">
+              <ul>
+                <li> <a href="login/index.html">دخول الطلاب</a></li>
+                <li>دخول أعضاء هيئة التدريس</li>
+                <li>دخول الخريجين</li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End of Navbar -->
+      </header>
+      <!-- Start of First Slide -->
+      <div class="container center">
+        <p class="section-label">إضافة الأخبار</p>
+      </div>
+      <section class="add-news">
+        <div class="container center">
+            <form action="index.php" class="add-news-frm">
+                <label for="">عنوان الخبر:</label>
+                <br>
+                <input type="text" name="news-name">
+                <label class="add-img" for="news-image-upload">إضافة صورة</label>
+                <br>
+                <input id ="news-image-upload" type="file" accept="image/png, image/jpeg" style="display:none">
+                <label for="">الموضوع:</label>
+                <textarea name="news-text" rows="10" cols="100"></textarea>
+                <input type="submit" value="إضافة الخبر">
+            </form>
+
+        </div>
+
+      </section>
+</body>
+</html>

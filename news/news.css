@@ -1,0 +1,44 @@
+* {
+  font-family: "Almarai";
+}
+
+input[type="text"],
+textarea {
+  margin: 10px 0px;
+  display: block;
+  padding: 10px;
+}
+input[name="news-name"]{
+    display: inline-block;
+}
+
+label {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.add-img {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgba(221, 162, 34, 0.133);
+}
+.add-img:hover {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgba(34, 221, 65, 0.133);
+  cursor: pointer;
+}
+input[type="submit"] {
+    margin-top:10px;
+  display: block;
+  padding: 10px 60px;
+  background-color: royalblue;
+  color: white;
+  transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(60, 79, 138);
+  color: white;
+  cursor: pointer;
+}
