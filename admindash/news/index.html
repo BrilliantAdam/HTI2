@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Document</title>
+
+    <style>
+
+        </style>
+        
+    <script>
+$(document).ready(function(){
+	$('#Mybtn').click(function(){
+  		$('#MyForm').toggle(500);
+  });
+});
+
+    </script>
+</head>
+<body>
+
+      <section class="add-news">
+        <div class="container center">
+            <form id="MyForm" action="index.php" class="add-news-frm">
+                <label for="">عنوان الخبر:</label>
+                <br>
+                <input type="text" name="news-name">
+                <label class="add-img" for="news-image-upload">إضافة صورة</label>
+                <br>
+                <input id ="news-image-upload" type="file" accept="image/png, image/jpeg" style="display:none">
+                <label for="">الموضوع:</label>
+                <textarea name="news-text" rows="10" cols="100"></textarea>
+                <input type="submit" value="إضافة الخبر">
+            </form>
+
+        </div>
+
+      </section>
+      
+</body>
+</html>

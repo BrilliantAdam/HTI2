@@ -1,91 +1,480 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- adding the main style of our website !-->
-    <link rel="stylesheet" href="styles/style1.css" />
-    <!-- adding normalize !-->
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <!-- The next code will add the arabic font to our website !-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Cairo:wght@300&display=swap" rel="stylesheet">
-    <!-- Adding Icon logo to the website !-->
-    <link
-      rel="icon"
-      href="images/logos/logo1.gif"
-      type="image/gif"
-      sizes="64x64"
-    />
-    <!-- End Font !-->
 
-    <title>Higher Techlongical Institute</title>
-  </head>
-  <body>
-    <!-- 29-12-2021 (First day of coding with Eng. Sharaf) !-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <!-- adding the main style of our website !-->
+  <link rel="stylesheet" href="styles/main.css" />
+  <!-- adding normalize !-->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <!-- The next code will add the arabic font to our website !-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Cairo:wght@300&display=swap"
+    rel="stylesheet">
+  <!-- Adding Icon logo to the website !-->
+  <link rel="icon" href="images/logos/logo1.gif" type="image/gif" sizes="64x64" />
+  <!-- End Font !-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Higher Techlongical Institute</title>
+  <script src="js/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
-    <header>
-      <!-- Start of Main Navbar -->
-      <nav class="main-nav">
-        <div class="container nav-container center">
-          <div class="right-nav">
-            <ul>
-              <li>عن المعهد</li>
-              <li>الكليات</li>
-              <li>الفروع</li>
-              <li>الأخبار</li>
-            </ul>
-          </div>
-          <div class="middle-logo"></div>
-          <div class="left-nav">
-            <ul>
-              <li> <a href="login/index.html">دخول الطلاب</a></li>
-              <li>دخول أعضاء هيئة التدريس</li>
-              <li>دخول الخريجين</li>
-            </ul>
+
+
+
+
+
+   <!-- <script>
+
+      document.addEventListener("DOMContentLoaded", function(){
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+              document.getElementById('navbar_top').classList.add('fixed-top');
+              // add padding top to show content behind navbar
+              navbar_height = document.querySelector('.navbar').offsetHeight;
+              document.body.style.paddingTop = navbar_height + 'px';
+            } else {
+              document.getElementById('navbar_top').classList.remove('fixed-top');
+              // remove padding top from body
+              document.body.style.paddingTop = '0';
+            } 
+        });
+      }); 
+    </script>  -->
+    <script type="text/javascript">
+      // jQuery counterUp
+      $('[data-toggle="counterUp"]').counterUp({
+          delay: 15,
+          time: 1500
+      });
+  </script>
+</head>
+
+<body>
+
+  <nav id="navbar_top" class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid container">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">دخول الخريجين</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">دخول هيئة التدريس</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login/">دخول الطلاب</a>
+          </li>
+      </div>
+      <div class="mx-auto order-0">
+        <div class=" middle-logo navbar-brand mx-auto "> </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#departments">الأقسام الهندسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#colleges">الكليات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-hti">عن المعهد</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#news">الأخبار</a>
+          </li>
+
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- Slideshow container -->
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="images/1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="images/2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/4.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/5.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <h1 id="news">أخبار المعهد</h1>
+
+
+  <section  class="news container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="images/11.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">قرار وزاري</h5>
+            <p class="card-text">قرر وزير التعليم العالي بمد الأجازة ثلاثة أسابي.. </p>
           </div>
         </div>
-      </nav>
-      <!-- End of Navbar -->
-    </header>
-    <!-- Start of First Slide -->
-    <section class="slide-1">
-      <div class="container">
-        <p>المعهد التكنولوجي العالي بالعاشر من رمضان</p>
       </div>
-    </section>
-
-    <!-- End of First Slide -->
-
-    <!-- Start of News Section -->
+      <div class="col">
+        <div class="card">
+          <img src="images/12.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">زيارة مفاجئة</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/13.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">معرض علوم بالمعهد</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/14.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">رئيس الوزراء</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/15.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">تخرج دفعة 2017</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">عنوان الخبر</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">عنوان الخبر</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">عنوان الخبر</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="images/11.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">قرار وزاري</h5>
+            <p class="card-text">قرر وزير التعليم العالي بمد الأجازة ثلاثة أسابي.. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/12.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">زيارة مفاجئة</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/13.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">معرض علوم بالمعهد</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/14.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">رئيس الوزراء</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/15.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">تخرج دفعة 2017</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">عنوان الخبر</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">عنوان الخبر</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="images/2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">عنوان الخبر</h5>
+            <p class="card-text">هنا يكون تفاصيل الخبر في اقل من 15 كلمة</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <a href="#" class="btn btn-primary btn-lg" tabindex="-1" role="button">للمزيد من الأخبار</a>
+    </div>
     
-    <div class="container center">
-      <p class="section-label">أخبار المعهد</p>
-    </div>
-    <section class="news">
-      <div class="container center wrapper">
-        <div class="important-news">
+  </section>
 
+  <h1 id="about-hti">عن المعهد</h1>
+  <section  class="about-hti">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col">
+
+
+          <h2>الخلفية التاريخية</h2>
+          <p>في فترة الثمانينيات ( 1980- 1990 ) أنشأت مجموعة من المصريين – تضم وزراء سابقين والعديد من المهتمين بالتعليم وأساتذة الجامعات ورجال الصناعة - جمعية تنمية المجتمعات العمرانية الجديدة. وهي جمعية لا تهدف إلى تحقيق الربح ولكن كان هدفها مساعدة الحكومة والقطاع الخاص في إصلاح مناطق شاسعة من صحراء مصر. وسرعان ما أدركت هذه الجماعة حاجة المجتمع إلى تعليم هندسي ذات طبيعة خاصة يتخذ من هذه المجتمعات الجديدة مقراً له ويفي بحاجة المجهودات المتزايدة للتعمير والتصنيع في هذه المجتمعات. </p>
         </div>
-        <div class="other-news">
-          <div class="news1"> <p>تم افتتاح معمل جديد بقسم الهندسة الكهربية </p> <button>إقرأ المزيد</button>
-          
+        <div class="col">
+          <h2>رؤية المعهد</h2>
+          <p>رؤية المعهد التكنولوجي العالي دائماً في تعزيز مكانته كمدرسة مهنية ذات مستوى عالمي تجذب إليها أعضاء هيئة
+            التدريس البارزين والطلاب النابهين. ولسوف يساهم المعهد في تنمية مصر والمنطقة كلها بتوفير تعليم على أعلى مستوى
+            وتشجيع البحث العلمي الأساسي والتطبيقي الذي يبلغ المستوى العالمي.</p>
+        </div>
+
+    </div>
+    <div class="row align-items-start">
+      <div class="col">
+        <h2>رسالة المعهد</h2>
+        <p>توفير برامج تعليمية حديثة رفيعة المستوى وتشجيع البحث العلمي والأنشطة الخلاقة علي يد أساتذته وطلابه وإقامة
+          علاقات قوية بين المؤسسة الأكاديمية والصناعية وأداء خدمات مهنية تراعي احتياجات مصر وظروفها بل واحتياجات المنطقة
+          وظروفها.
+          ويعد المعهد طلابه في بيئة تتحدى قدراتهم وتشحذ تفكيرهم وتحسن باستمرار مستوياتهم في التعليم والإبداع والريادة في
+          مجالات تخصصاتهم وتعطيهم القدرة لحياة مهنية ثرية.</p>
           </div>
-          <div class="news2"><p>تم افتتاح معمل جديد بقسم الهندسة الكهربية </p><button>إقرأ المزيد</button></div>
-          <div class="news3"><p>تم افتتاح معمل جديد بقسم الهندسة الكهربية </p><button>إقرأ المزيد</button></div>
-          <div class="news4"><p>تم افتتاح معمل جديد بقسم الهندسة الكهربية </p><button>إقرأ المزيد</button></div>
+        <div class="col">
+          <h2>موقع المعهد</h2>
+          <p>يقع المقر الرئيس للمعهد بمدينة العاشر من رمضان على مسافة تبعد حوالي 50 كيلو مترأ شرق القاهرة على الطريق
+            الصحراوي المؤدي إلى مدينتي الإسماعيلية وبورسعيد. وتبلغ مساحة المعهد حوالي 16 هكتار (160.000 متر مربع) ويضم
+            المقر سبعة مبانٍ منها الفصول والمدرجات والمعامل وصالة الألعاب ومركز الرعاية الطبية. وعلى بعد أقل من كيلو مترين
+            من المقر توجد عشر عمارات لإسكان الطلبة وعمارتان لإسكان الطالبات.</p>
+  
         </div>
-      </div>
-
-    </section>
-    <div class="container center">
-      <p class="section-label">فاعليات المعهد</p>
     </div>
-    <section class="activities">
-      <div class="container center wrapper"></div>
-      
-      
-    </section>
-  </body>
+
+    </div>
+  </section>
+
+<h1>إحصائيات</h1>
+
+
+
+
+<!--Ah-->
+   <!-- Counts Section -->
+   <section class="counts-section">
+    <div class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-6 text-center">
+                    <h2 data-toggle="counterUp">14322</h2>
+                    <h6>طلاب المرحلة الجامعية</h6>
+                </div>
+                <div class="col-lg-3 col-6 text-center">
+                    <h2 data-toggle="counterUp">455</h2>
+                    <h6>طلاب الدراسات العليا</h6>
+                </div>
+                <div class="col-lg-3 col-6 text-center">
+                    <h2 data-toggle="counterUp">562</h2>
+                    <h6>هيئة التدريس</h6>
+                </div>
+                <div class="col-lg-3 col-6 text-center">
+                    <h2 data-toggle="counterUp">312</h2>
+                    <h6>العاملون</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h1>الكليات</h1>
+<section id="colleges" class="colleges">
+  <div class="container center row align-items-start">
+    <div class="col">
+      <img src="images/4.jpg" alt="">
+      <h2>كلية الهندسة</h2>
+    </div>
+    <div class="col">
+      <img src="images/5.jpg" alt="">
+      <h2>كلية حاسبات ومعلومات</h2>
+    </div>
+    <div class="col">
+      <img src="images/6.jpg" alt="">
+      <h2>كلية إدارة أعمال</h2>
+    </div>
+  </div>
+</section>
+
+
+<script type="text/javascript">
+  // jQuery counterUp
+  $('[data-toggle="counterUp"]').counterUp({
+      delay: 15,
+      time: 1500
+  });
+</script>
+
+<h1 id="departments">الأقسام الهندسية</h1>
+<section class="departments container center">
+  <div class="row align-items-start">
+    <div class="col">
+      <img src="images/mec1.jpg" alt="">
+    </div>
+    <div class="col">
+      <h1>قسم ميكانيكا</h1>
+      <p>فرع من فروع الهندسة يهتم بتصميم، وتصنيع، وتشغيل، وتطوير الآلات أو الأجهزة المستخدمة في مختلف قطاعات النشاطات الاقتصادية</p>
+    </div>
+  </div>
+  <div class="row align-items-start">
+
+    <div class="col">
+      <h1>قسم ميكاترونكس</h1>
+      <p>هذا الحقل الهندسي يجمع بين الهندسة الميكانيكية، والهندسة الكهربائية، وهندسة الحاسوب وهندسة الإلكترونيات، ويتطور هذا التخصص بصورة مذهلة من يوم إلى آخر</p>
+    </div>
+    <div class="col">
+      <img src="images/mec2.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="row align-items-start">
+    <div class="col">
+      <img src="images/mec3.jpg" alt="">
+    </div>
+    <div class="col">
+      <h1>قسم كهرباء</h1>
+      <p> تخصص يهتم بدراسة وتطبيقات علوم الكهرباء والإلكترونيات والمجالات الكهرومغناطيسيةوالشبكات والاتصالات وهندسة الحاسب الآلي</p>
+    </div>
+  </div>
+  <div class="row align-items-start">
+
+    <div class="col">
+      <h1>قسم هندسة طبية</h1>
+      <p>تخصص الهندسة الطبية ويعرف أيضاً بمسمى هندسة المعدات الطبية ويهدف التخصص إلى حل المشكلات الطبية من خلال توفير التقنيات الهندسية المتطورة التي تساعد الأطباء على تشخيص وعلاج أفضل للمرضى</p>
+    </div>
+    <div class="col">
+      <img src="images/mec4.jpg" alt="">
+    </div>
+  </div>
+  <div class="row align-items-start">
+    <div class="col">
+      <img src="images/mec5.jpg" alt="">
+    </div>
+    <div class="col">
+      <h1>قسم عمارة</h1>
+      <p>
+        تُعتَبر هندسة العمارة فرعًا من قسم الفنون والتصميم، كما أنها فرعًا من فروع الهندسة أو نوعًا منها. حيث يختص كل نوع من أنواع الهندسة بجانب معيّن وتختص هندسة العمارة بجوانب البناء والتصميم والإنشاء.</p>
+    </div>
+  </div>
+  <div class="row align-items-start">
+
+    <div class="col">
+      <h1>قسم مدني</h1>
+      <p>أحد فروع الهندسة والمعنية بدراسة وتصميم وتحليل المنشآت المدنية المختلفة كالأبنية السكنية والخدمية والطرق والجسور والأنفاق والمطارات والموانئ وشبكات إمداد مياه الشرب ومحطات ضخ المياه وشبكات الصرف الصحي ومحطات التنقية ومعالجة المياه</p>
+    </div>
+    <div class="col">
+      <img src="images/mec6.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<footer>
+
+<div class="container center row align-items-start">
+<div class="col">
+  <h2>بيانات الاتصال</h2>
+<a href="">(055) 351292</a>
+<a href="">(055) 4363497</a>
+<a href="">support@hti.edu.eg</a>
+</div>
+<div class="col">
+  <h2>مواقع ذات صلة</h2>
+  <a href="">المجلس الاعلى للجامعات</a>
+  <a href="">وزارة التعليم العالي</a>
+  <a href="">الهيئة القومية لضمان الجودة والتعليم</a>
+  <a href="">نقابة المهندسين</a>
+  <a href="">كليات الهندسة في الجامعات المصرية</a>
+
+</div>
+
+<div class="col">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13826.738888224332!2d30.933654!3d29.959746!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf9beef50a26df9d1!2sHigh%20Institute%20For%20Architecture%20Engineering!5e0!3m2!1sen!2seg!4v1642815886768!5m2!1sen!2seg"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+</div>
+<p>جميع الحقوق محفوظة &copy; 2022 </p>
+<p>معهد العاشر من رمضان</p>
+</footer>
+</body>
 </html>

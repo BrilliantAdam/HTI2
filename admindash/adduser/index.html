@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Document</title>
+
+    <style>
+
+        </style>
+        
+    <script>
+$(document).ready(function(){
+	$('#Mybtn').click(function(){
+  		$('#MyForm').toggle(500);
+  });
+});
+
+    </script>
+</head>
+<body>
+
+      <section class="add-news">
+        <div class="container center">
+            <form id="MyForm" action="index.php" class="add-news-frm">
+                <label for="">رقم الطالب</label>
+                <br>
+                <input type="text" name="studentID">
+                <label for="">اسم الطالب</label>
+                <br>
+                <input type="text" name="fullname">
+                <label for="">ميلاد الطالب</label>
+                <br>
+                <input type="date" name="birthdate">
+                <label for="">ايميل الطالب</label>
+                <br>
+                <input type="email" name="email">
+                <label for="">كلمة المرور </label>
+                <br>
+                <input type="password" name="password">
+                <label for=""> تليفون الطالب</label>
+                <br>
+                <input type="text" name="phoneNumber">
+                <label for="">عنوان الطالب</label>
+                <br>
+                <input type="text" name="address">
+                <label for="">القسم</label>
+                <br>
+                <input type="text" name="departmentID">
+                <label for="">تليفون الاب</label>
+                <br>
+                <input type="text" name="parentphone"> 
+              <input type="submit" value="إضافة الطالب">
+            </form>
+
+        </div>
+
+      </section>
+      
+</body>
+</html>
